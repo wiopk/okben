@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: okmi4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: okmi4
+  template:
+    metadata:
+      labels:
+        app: okmi4
+    spec:
+      containers:
+      - image: okteto.dev/okmi4:latest
+        name: okmi4
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: Site
+          value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
+        - name: ParameterSSENCYPT
+          value: "chacha20-ietf-poly1305"
+        - name: AUUID
+          value: "93f27c74-4eeb-4079-9ed8-dd423c691f11"
