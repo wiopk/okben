@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uiok1
+  name: myly3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uiok1
+      app: myly3
   template:
     metadata:
       labels:
-        app: uiok1
+        app: myly3
     spec:
       containers:
-      - image: okteto.dev/uiok1:latest
-        name: uiok1
+      - image: okteto.dev/myly3:latest
+        name: myly3
         ports:
         - containerPort: 8080
         env:
@@ -25,4 +25,4 @@ spec:
         - name: ParameterSSENCYPT
           value: "chacha20-ietf-poly1305"
         - name: AUUID
-          value: "30cc16cd-a2b6-4f8f-8da1-472a6d593ec6"
+          value: "2c49ad6b-6205-42ce-b364-143a82958b13"
