@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: okmi4
+  name: uiok1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: okmi4
+      app: uiok1
   template:
     metadata:
       labels:
-        app: okmi4
+        app: uiok1
     spec:
       containers:
-      - image: okteto.dev/okmi4:latest
-        name: okmi4
+      - image: okteto.dev/uiok1:latest
+        name: uiok1
         ports:
         - containerPort: 8080
         env:
@@ -25,4 +25,4 @@ spec:
         - name: ParameterSSENCYPT
           value: "chacha20-ietf-poly1305"
         - name: AUUID
-          value: "93f27c74-4eeb-4079-9ed8-dd423c691f11"
+          value: "30cc16cd-a2b6-4f8f-8da1-472a6d593ec6"
